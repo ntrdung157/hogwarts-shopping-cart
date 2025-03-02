@@ -143,6 +143,7 @@
     let taxEstimate = computed(() => subtotal.value * 0.08)
 
     let total = computed(() => subtotal.value + shippingEstimate.value + taxEstimate.value)
+    
 </script>
 
 <style scoped>
