@@ -45,12 +45,12 @@
                     </div>
                     <div class="summary-item">
                         <span>Tax estimate</span>
-                        <span>$1112</span>
+                        <span>${{ taxEstimate }}</span>
                     </div>
                 </div>
                 <div class="summary-total">
                     <strong>Order total</strong>
-                    <strong>$15112</strong>
+                    <strong>${{ total }}</strong>
                 </div>
                 <button class="checkout-button">Checkout</button>
             </div>
