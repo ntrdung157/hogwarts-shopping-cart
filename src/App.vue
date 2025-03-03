@@ -61,6 +61,7 @@
 <script setup>
     import { ref } from 'vue';
     import { computed } from 'vue';
+    import { watch } from 'vue';
 
     let username = 'Harry'
     let shoppingCartItems = ref([
@@ -144,6 +145,9 @@
 
     let total = computed(() => subtotal.value + shippingEstimate.value + taxEstimate.value)
     
+    watch(shoppingCartItems, ()=>{
+        localStorage.setItem('hogwartsShoppingCart', JSON.stringify(shoppingCartItems.value))
+    }, { deep: true })
 </script>
 
 <style scoped>
